@@ -1,0 +1,21 @@
+body {
+    margin: 50px auto;
+    padding: 30px;
+    width: 40%;
+    border: 1px solid black;
+}
+
+header h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+ .center a {
+    text-align: center;
+}
+
+
+
+
+
