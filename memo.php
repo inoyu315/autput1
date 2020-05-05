@@ -14,7 +14,7 @@
     <main>
     <?php
    require('dbconnect.php');
-   
+
     //idが数字ではない時・0以下の数字の時の処理
     $id = $_REQUEST['id'];
     if (!is_numeric($id) || $id <= 0) {
@@ -31,7 +31,9 @@
 
     <article>
         <?php print($memo['memo']); ?><br><br>
-        <a href="index.php">戻る</a>
+        <a href="update.php?id=<?php print($memo['id']); ?>">編集する</a>
+        |
+        <a href="index.php">一覧に戻る</a>
     </article>
 
 
