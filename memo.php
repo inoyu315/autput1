@@ -33,6 +33,8 @@
         <?php print($memo['memo']); ?><br><br>
         <a href="update.php?id=<?php print($memo['id']); ?>">編集する</a>
         |
+        <a href="delete.php?id=<?php print($memo['id']); ?>">削除する</a>
+        |
         <a href="index.php">一覧に戻る</a>
     </article>
 
