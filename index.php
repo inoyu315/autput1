@@ -1,15 +1,33 @@
+<?php
+session_start();
+require('dbconnect.php');
+
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+    $_SESSION['time'] = time();
+
+    $members = $db->prepare('SELECT * FROM members WHERE id=?');
+    $members->execute(array($_SESSION['id']));
+    $member = $members->fetch();
+} else {
+    header('Location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>掲示板</title>
+    <title>メモアプリ</title>
     <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body>
     <header>
-        <h1>掲示版</h1>
+        <h1>メモアプリ</h1>　
+        <a href="input.html">メモを登録する</a><br>
+        <a href="logout.php">ログアウト</a>
+        <p>ようこそ、<?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?>さん</p>
     </header>
     <main>
     <?php

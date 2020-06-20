@@ -11,11 +11,39 @@ header h1 {
     margin: 10px;
 }
 
+header a {
+    float: right;
+}
+
+header p {
+    text-align: center;
+}
+
  .center a {
     text-align: center;
 }
 
 
+form {
+    text-align: center;
+}
 
+span {
+    color: white;
+    background-color: red;
+    padding: 3px;
+    margin-left: 2px;
+}
 
+.error {
+    color: red;
+}
+
+.index {
+    font-size: 20px;
+}
+
+.check {
+    font-size: 20px;
+}
 

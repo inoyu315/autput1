@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>掲示板</title>
+    <title>メモアプリ</title>
     <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body>
     <header>
-        <h1>掲示版</h1>
+        <h1>メモアプリ</h1>
     </header>
     <main>
         <?php 
@@ -20,6 +20,7 @@
         echo 'メッセージが登録されました';
         ?>
        <br><br><a href="input.html">新しいメモを登録する</a>
+       <a href="index.php">ホームに戻る</a>
     </main>
 </body>
 </html>
